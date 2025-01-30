@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+    <h1> <center> Employee Registration Form </center> </h1>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend> <b> Personal Information </b> </legend>
+
+        <label> First Name <span style="color: red;">* </span></label>
+        <input type = "text" pattern = "[A-Za-z]+" placeholder = "Enter first name" required ><br><br>
+
+        <label> Last Name <span style="color: red;">*</span></label>
+        <input type = "text" pattern = "[A-Za-z]+" placeholder = "Enter last name"required ><br><br>
+        
+        <label> Email <span style="color: red;">*</span></label>
+        <input type = "email" placeholder = "Enter email address" required ><br>
+        <small style = "color : grey;"> Example: johndoe@example.com </small><br><br>
+        <label> Phone Number <span style="color: red;">*</span></label>
+        <input type = "tel" pattern = "[0-9]+" placeholder = "Enter phone number" required> <br><br>
+        
+        <label> Gender <span style="color: red;">*</span></label>
+        <input type = "radio" name = "gender" value = "male" required> Male
+        <input type = "radio" name = "gender" value = "female" required> Female
+        <input type = "radio" name = "gender" value = "other" required> Other <br><br>
+
+        <label> Date of Birth <span style="color: red;">*</span></label>
+        <input type = "date" required> <br><br>
+
+        <label> Marital Status <span style="color: red;">*</span></label>
+        <input type = "radio" name = "marital" value = "single" required> Single
+        <input type = "radio" name = "marital" value = "married" required> Married  <br><br>
+
+        <lable> Spouse Name : (If applicable) </lable>
+        <input type = "text">
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend> <b> Employement Details </b> </legend>
+
+        <label> Department <span style="color: red;">*</span></label>
+        <select  required>
+            <option value = "">Select Department</option>
+            <option value = "HR">HR</option>
+            <option value = "IT">IT</option>
+            <option value = "Finance">Finance</option>
+            <option value = "Marketing">Marketing</option>
+        </select> <br><br>
+ 
+        <label> Years of Experience : </label>
+        <input type = "number" min = "0" placeholder = " Enter experience in year " required> <br><br>
+
+        <label> Skills : </label>
+        <input type = "checkbox" value = "html"> HTML
+        <input type = "checkbox" value = "css"> CSS
+        <input type = "checkbox" value = "js"> Javascript
+        <input type = "checkbox" value = "sql"> SQL <br><br>
+
+        <label> Certifications : </label> <br>
+        <textarea rows="5" cols="15" placeholder="List your certifictaes here..."></textarea>
+        <br><br>
+        <label> Profile Picture : </label> <br><br>
+        <input type = "file" accept = ".jpg, .png">
+        <br>
+        <small style = "color : grey;"> Allowed formats : JPG,PNG</small> 
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend> <b> Emergency Contact </b> </legend>
+
+        <label> Contact Name <span style="color: red;">*</span></label>
+        <input type = "text" pattern = "[A-Za-z]+" placeholder = "Enter contact name" required ><br><br>
+
+        <label> Contact Phone <span style="color: red;">*</span></label>
+        <input type = = "tel" pattern = "[0-9]+" placeholder = "Enter contact phone" required ><br><br>
+        
+        <label> Relationship <span style="color: red;">*</span></label>
+        <input type = "text" placeholder = "Enter relationship (eg., parent )" required ><br><br>
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend> <b> Address Details </b> </legend>
+
+        <label> Address <span style="color: red;">*</span></label> 
+        <br>
+        <textarea rows="5" cols="15" placeholder="Enter your address here..."></textarea>
+        <br><br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend> <b> Login Details </b> </legend>
+
+        <label> User name <span style="color: red;">*</span></label>
+        <input type = "text" placeholder = "Choose a username"><br><br>
+
+        <label> Password <span style="color: red;">*</span></label>
+        <input type = "password" placeholder = "Enter password"><br><br>
+     
+        <label> Confirm Password <span style="color: red;">*</span></label>
+        <input type = "password" placeholder = "Re-enter password"><br><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend> Form Submission </legend>
+        <input type = "submit" value = "Register">
+        <input type = "reset" value = "Clear">
+    </fieldset>
+</form>
+</body>
+</html>
