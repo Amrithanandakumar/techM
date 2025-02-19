@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden; /* Prevent body overflow */
+        }
+        .sidebar {
+            width: 250px;
+            position: fixed; /* Fix the sidebar */
+            height: 100%; /* Full height */
+            overflow-y: auto; /* Scroll if content overflows */
+            background-color: #343a40; /* Dark background for sidebar */
+        }
+        .main-content {
+            margin-left: 250px; /* Space for the fixed sidebar */
+            width: calc(100% - 250px); /* Adjust width of main content */
+            overflow-y: auto; /* Allow scrolling in the main content */
+        }
+        #userGrowthChart {
+            width: 100%; /* Full width */
+            height: 300px; /* Set height */
+        }
+        canvas {
+            height: 100% !important; /* Ensure canvas fills the div */
+            width: 100% !important; /* Ensure canvas fills the div */
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-black text-white">
+    <div class="d-flex flex-column sidebar bg-dark text-white vh-100">
+        <!-- Profile Section -->
+        <div class="text-center">
+            <img src="assets/images/admin-profile.jpg" class="rounded-circle img-fluid" width="80" height="80">
+            <h5 class="mt-2">Amritha</h5>
+            <h3 class="mt-1 text-primary">Master Admin</h3>
+        </div>
+        <hr>
+    
+        <!-- Sidebar Menu -->
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a id="dashboardLink" href="adminhome.html" class="nav-link text-white">
+                    <i class="bi bi-grid-fill text-me-2"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a id="userManagementLink" href="#" class="nav-link text-white active bg-primary">
+                    <i class="bi bi-person-fill me-2"></i> User Management
+                </a>
+            </li>
+            <li>
+                <a href="planmng.html" class="nav-link text-white">
+                    <i class="bi bi-gem me-2"></i> Plan Management
+                </a>
+            </li>
+            <li>
+                <a href="staticpage.html" class="nav-link text-white">
+                    <i class="bi bi-table me-2"></i> Total Static
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg bg-primary sticky-top">
+            <a class="navbar-brand fw-bold text-light fs-4 ms-3" href="adminhome.html">ṃȏɞı-ċȏṃṃ</a>
+            <div class="ml-auto ms-auto me-4">
+                <img src="assets/images/admin-profile.jpg" class="rounded-circle" width="40" height="40">
+            </div>
+        </nav>
+        <div class="container-fluid-expland-lg">
+            <div class="bg-secondary text-white p-3 mb-4">
+                <h3 class="tex-">User Management</h3>
+            </div>
+        </div>
+        <h4 class="text-primary pb-3 ms-5">Users Growth Analysis</h4>
+        <div class="mb-3 d-flex align-items-center ms-5">
+            <div class="me-3"> 
+                <input type="radio" id="year2023" name="year" value="2023" onchange="updateChart()" class="form-check-input">
+                <label for="year2023" class="form-check-label text-light">2023</label>
+            </div>
+            <div>
+                <input type="radio" id="year2024" name="year" value="2024" onchange="updateChart()" class="form-check-input" checked>
+                <label for="year2024" class="form-check-label text-light">2024</label>
+            </div>
+        </div>
+        <!-- User Growth Chart -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">User Growth Chart</h4>
+                <canvas id="userGrowthChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+ 
+        const ctx = document.getElementById('userGrowthChart').getContext('2d');
+        let userGrowthChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'March', 'May', 'July','August', 'November', 'December' ],
+                datasets: [{
+                    label: 'User Growth 2024', // Default label for the dataset
+                    data: [70, 150, 230, 310, 420, 560, 800], // Default data for 2024
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const data2023 = [50, 100, 150, 200, 300, 500, 700]; // Sample data for 2023
+        const data2024 = [70, 150, 230, 310, 420, 560, 800]; // Sample data for 2024
+
+        function updateChart() {
+            const selectedYear = document.querySelector('input[name="year"]:checked').value;
+            if (selectedYear === '2023') {
+                userGrowthChart.data.datasets[0].data = data2023;
+                userGrowthChart.data.datasets[0].label = 'User Growth 2023'; // Update label for 2023
+            } else {
+                userGrowthChart.data.datasets[0].data = data2024;
+                userGrowthChart.data.datasets[0].label = 'User Growth 2024'; // Update label for 2024
+            }
+            userGrowthChart.update();
+        }
+
+        updateChart();
+    </script>
+</body>
+</html>

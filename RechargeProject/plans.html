@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+        .hover-shadow:hover {
+    box-shadow: 0 0 10px white !important; /* Glowing effect */
+}
+
+.transition-scale {
+    transition: transform 0.3s ease-in-out !important;
+}
+
+.transition-scale:hover {
+    transform: scale(1.05);
+}
+.caption-left {
+    left: 5%; /* Moves the text towards the left */
+    right: auto; /* Prevents it from being centered */
+    bottom: 25%; /* Moves it upwards */
+    transform: translateY(50%); /* Centers it vertically */
+    text-align: left; /* Aligns text to the left */
+    width: 40%; /* Restricts text width to avoid spanning the full image */
+}
+
+    </style>
+</head>
+
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary fixed-top shadow-lg bg-opacity-75">
+            <a class="navbar-brand text-white fw-bold fs-3 ms-3" href="home.html">ṃȏɞı-ċȏṃṃ</a>
+    
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex align-items-center ms-auto me-4">
+                    <ul class="navbar-nav d-flex flex-row">
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white fw-semibold" href="#">About us</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white fw-semibold" href="#">Plans</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white fw-semibold" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+    
+                    <!-- Search Bar -->
+                    <i class="bi bi-search text-white fs-5 cursor-pointer me-3" id="searchIcon"></i>
+                    <div id="searchBar" class="input-group d-none bg-white shadow-lg rounded-5 overflow-hidden" style="max-width: 180px;">
+                        <input type="text" class="form-control border-0">
+                        <span class="input-group-text cursor-pointer" id="closeSearch">
+                            <i class="bi bi-x"></i> 
+                        </span>
+                    </div>
+    
+                    <!-- Profile Icon -->
+                    <div class="position-relative"  id="profileContainer">
+                        <i class="bi bi-person-circle text-white fs-3 ms-3 cursor-pointer" id="profileIcon"></i>
+                        <div id="profileMenu" class="d-none position-absolute bg-white shadow-lg rounded p-2" style="right: 0; top: 40px; min-width: 150px;">
+                            <!-- <a class="d-block text-dark text-decoration-none p-2" href="#">Profile</a> -->
+                            <a class="d-block text-dark text-decoration-none p-2" href="#">Login</a>
+                            <a class="d-block text-dark text-decoration-none p-2" href="#">Settings</a>
+                            <a class="d-block text-dark text-decoration-none p-2" href="#">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container mt-5 pt-5">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active hover-shadow transition-scale" data-bs-interval="3000">
+                        <img src="assets/images/plan-car.jpeg" class="d-block w-100 rounded-5 shadow-lg" alt="Plan 1" style="height: 500px; object-fit: cover;" data-bs-toggle="modal" data-bs-target="#imageModal1">
+                        <div class="carousel-caption text-start caption-left">
+                            <h3 class="fw-bold fs-1 fst-italic text-danger">Special Family Plan</h3>
+                            <p class="fs-3 text-light">Get this special family plan for up to 4 members!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item hover-shadow transition-scale" data-bs-interval="3000">
+                        <img src="assets/images/plan-car2.jpeg" class="d-block w-100 rounded-5 shadow-lg" alt="Plan 1" style="height: 500px; object-fit: cover;" data-bs-toggle="modal" data-bs-target="#imageModal1">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <h3 class="fw-bold fs-1 text-light"><span style="color: orangered;">Republic </span> Day <span style="color:green">Offer</span></h3>
+                            <p class="fs-3">Enjoy seamless transactions and exclusive discounts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <!-- Plan 1 Modal -->
+        <div class="modal fade" id="imageModal1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Plan 1 Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Data:</strong> 2GB per day</p>
+                        <p><strong>Validity:</strong> 28 days</p>
+                        <p><strong>Offer:</strong> Free Netflix subscription</p>
+                        <p><strong>Amount:</strong> ₹299</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Plan 2 Modal -->
+        <div class="modal fade" id="imageModal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Plan 2 Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Data:</strong> 1.5GB per day</p>
+                        <p><strong>Validity:</strong> 56 days</p>
+                        <p><strong>Offer:</strong> Free Amazon Prime</p>
+                        <p><strong>Amount:</strong> ₹499</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Plan 3 Modal-->
+        <div class="modal fade" id="imageModal3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Plan 3 Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Data:</strong> Unlimited</p>
+                        <p><strong>Validity:</strong> 84 days</p>
+                        <p><strong>Offer:</strong> Free Disney+ Hotstar</p>
+                        <p><strong>Amount:</strong> ₹799</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="d-flex justify-content-end p-5 pt-5">
+            <button class="btn btn-primary rounded-5" data-bs-toggle="modal" data-bs-target="#filterModal">
+                <i class="bi bi-sliders"></i> Filter
+            </button>
+        </div>
+
+        <!-- Filter Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered w-50">
+        <div class="modal-content bg-secondary text-light">
+            <div class="modal-header">
+                <h5 class="modal-title">Filter Plans</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body d-flex">
+                <div class="list-group me-3">
+                    <a href="#" class="list-group-item list-group-item-action active" data-filter="data">Data</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-filter="validity">Validity</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-filter="price">Price</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-filter="ott">OTT Plans</a>
+                </div>
+
+                <!-- Filter Options -->
+                <div class="flex-grow-1 ps-4">
+                    <!-- Data Options -->
+                    <div class="filter-option" id="data-options">
+                        <h6>Data</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="data1">
+                            <label class="form-check-label" for="data1">1.5 GB/day</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="data2">
+                            <label class="form-check-label" for="data2">2 GB/day</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="data3">
+                            <label class="form-check-label" for="data3">2.5 GB/day</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="data4">
+                            <label class="form-check-label" for="data4">3 GB/day</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="data5">
+                            <label class="form-check-label" for="data5">Unlimited 5G</label>
+                        </div>
+                    </div>
+
+                    <!-- Validity Options -->
+                    <div class="filter-option" id="validity-options" style="display: none;">
+                        <h6>Validity</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="validity1">
+                            <label class="form-check-label" for="validity1">Annual Plan</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="validity2">
+                            <label class="form-check-label" for="validity2">1 Month Plan</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="validity3">
+                            <label class="form-check-label" for="validity3">2 Months Plan</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="validity4">
+                            <label class="form-check-label" for="validity4">3 Months Plan</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="validity5">
+                            <label class="form-check-label" for="validity5">6 Months Plan</label>
+                        </div>
+                    </div>
+
+                    <!-- Price Options -->
+                    <div class="filter-option" id="price-options" style="display: none;">
+                        <h6>Price</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="price1">
+                            <label class="form-check-label" for="price1">150 - 300</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="price2">
+                            <label class="form-check-label" for="price2">301 - 450</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="price3">
+                            <label class="form-check-label" for="price3">501 - 650</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="price4">
+                            <label class="form-check-label" for="price4">701 - 850</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="price5">
+                            <label class="form-check-label" for="price5">901 - 1500</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="price6">
+                            <label class="form-check-label" for="price6">Above 1500</label>
+                        </div>
+                    </div>
+
+                    <!-- OTT Options -->
+                    <div class="filter-option" id="ott-options" style="display: none;">
+                        <h6>OTT Plans</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ott1">
+                            <label class="form-check-label" for="ott1">Netflix</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ott2">
+                            <label class="form-check-label" for="ott2">Amazon Prime</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ott3">
+                            <label class="form-check-label" for="ott3">Jio Tv</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ott4">
+                            <label class="form-check-label" for="ott4">Disney+Hotstar</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ott5">
+                            <label class="form-check-label" for="ott5">Zee5</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-light">Clear all</button>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Top Trending Plans Section -->
+<div class="container mt-4 pb-4">
+    <h2 class="mb-3 text-primary" style="font-family: 'Courgette', cursive;">Top Trending Plans</h2>
+    <div class="row g-3">
+        <div class="col-md-4 plan-card" data-data="2.5 GB/day" data-validity="365 days" data-price="₹3599" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('2.5 GB/day', '356 days', 'Unlimited', '100SMS/day', 'Netflix, Amazon Prime', '₹3599')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹3599</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">2.5 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+2 more</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 plan-card" data-data="2GB/day" data-validity="365 days" data-price="₹3999" data-ott="Disney+Hotstar">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('2GB/day', '356 days', 'Unlimited', '100SMS/day', 'Disney+Hotstrar', '₹3999')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹3999</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">2 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+2 more</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 plan-card" data-data="2.5GB/day" data-validity="85 days" data-price="₹1199" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('2.5GB/day', '85 days', 'Unlimited', '100SMS/day', 'Netflix, Amazon Prime', '₹1199')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1199</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">85 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">2.5 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+2 more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Top Unlimited Plans Section -->
+<div class="container mt-5">
+    <h2 class="mb-3 text-primary" style="font-family: 'Courgette', cursive;">Top Unlimited Plans</h2>
+    <div class="row g-3">
+        <!-- Existing Unlimited Plan Cards -->
+        <div class="col-md-4 plan-card" data-data="2GB/day" data-validity="28 days" data-price="₹299" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('1.5GB/day', '56 days', 'Unlimited', 'Unlimited', 'Netflix, Amazon Prime', '₹499')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹3599</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">56 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">1.5 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+2 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 plan-card" data-data="2GB/day" data-validity="28 days" data-price="₹299" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('Unlimited', '3 days', 'Unlimited', '100SMS/day', 'Sony Live', '₹399')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹399</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">3 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">Unlimited</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+1 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 plan-card" data-data="2GB/day" data-validity="28 days" data-price="₹299" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('2.5 GB/day', '30 days', 'Unlimited', 'Unlimited', 'Netflix, Amazon Prime', '₹799')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹799</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">30 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">2.5 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+2 more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View More Button -->
+    <div class="row mt-3">
+        <div class="col text-end">
+            <button class="btn text-light" id="viewMoreBtn1" onclick="togglePlans('morePlans1', 'viewMoreBtn1', 'hidePlansBtn1')" style="border: none; background: transparent;">
+                <i class="bi bi-caret-down-fill text-primary fs-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Additional Plans -->
+    <div id="morePlans1" class="row g-3 mt-4" style="display: none;">
+        <div class="col-md-4" data-data="2GB/day" data-validity="28 days" data-price="₹299" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-hulu text-success fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-data="2GB/day" data-validity="28 days" data-price="₹299" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-hulu text-success fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-data="2GB/day" data-validity="28 days" data-price="₹299" data-ott="Netflix">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-hulu text-success fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hide Plans Button -->
+    <div id="hidePlansBtn1" class="row mt-2" style="display: none;">
+        <div class="col text-end">
+            <button class="btn text-light" onclick="togglePlans('morePlans1', 'viewMoreBtn1', 'hidePlansBtn1')" style="border: none; background: transparent;">
+                <i class="bi bi-caret-up-fill text-primary fs-2"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Top Entertainment Plans -->
+<div class="container mt-4">
+    <h2 class="mb-3 text-primary" style="font-family: 'Courgette', cursive;">Top Entertainment Plans</h2>
+    <div class="row g-3">
+        <!-- Existing Entertainment Plan Cards -->
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('1.5GB/day', '56 days', 'Unlimited', '100SMS/day', 'Netflix, Amazon Prime', '₹499')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹3599</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">2.5 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+2 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for other Entertainment Plan Cards -->
+    </div>
+    <!-- View More Button -->
+    <div class="row mt-3">
+        <div class="col text-end">
+            <button class="btn text-light" id="viewMoreBtnEntertainment" onclick="togglePlans('moreEntertainmentPlans', 'viewMoreBtnEntertainment', 'hideEntertainmentPlansBtn')" style="border: none; background: transparent;">
+                <i class="bi bi-caret-down-fill text-primary fs-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Additional Entertainment Plans -->
+    <div id="moreEntertainmentPlans" class="row g-3 mt-4" style="display: none;">
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <<i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '40 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">40 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for other Additional Entertainment Plan Cards -->
+    </div>
+
+    <!-- Hide Plans Button -->
+    <div id="hideEntertainmentPlansBtn" class="row mt-2" style="display: none;">
+        <div class="col text-end">
+            <button class="btn text-light" onclick="togglePlans('moreEntertainmentPlans', 'viewMoreBtnEntertainment', 'hideEntertainmentPlansBtn')" style="border: none; background: transparent;">
+                <i class="bi bi-caret-up-fill text-primary fs-2"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Top Add-On Plans -->
+<div class="container mt-4">
+    <h2 class="mb-3 text-primary" style="font-family: 'Courgette', cursive;">Top Add-On Plans</h2>
+    <div class="row g-3">
+        <!-- Existing Add-On Plan Cards -->
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('2.5GB/day', '365 Days', 'Unlimited', '100SMS/day', 'Netflix, Amazon', '₹3599')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹3599</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">2.5 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+2 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '365 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '365 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- View More Button -->
+    <div class="row mt-3">
+        <div class="col text-end">
+            <button class="btn text-light" id="viewMoreBtnAddOns" onclick="togglePlans('moreAddOnPlans', 'viewMoreBtnAddOns', 'hideAddOnPlansBtn')" style="border: none; background: transparent;">
+                <i class="bi bi-caret-down-fill text-primary fs-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Additional Add-On Plans -->
+    <div id="moreAddOnPlans" class="row g-3 mt-4" style="display: none;">
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '365 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '365 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm border rounded-4 bg-secondary text-light hover-shadow transition-scale" onclick="showPlan('4GB/day', '365 days', 'Unlimited', '300SMS/day', 'Netflix, Hulu', '₹1099')">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="fw-bold">₹1099</h3>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="mb-0 fw-bold">365 Days</p>
+                        <small class="text-light">Validity</small>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">4 GB/Day</p>
+                        <small class="text-light">Data</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-youtube text-danger fs-4"></i>
+                    <span class="ms-2 text-light">+4 more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hide Plans Button -->
+    <div id="hideAddOnPlansBtn" class="row mt-2" style="display: none;">
+        <div class="col text-end">
+            <button class="btn text-light" onclick="togglePlans('moreAddOnPlans', 'viewMoreBtnAddOns', 'hideAddOnPlansBtn')" style="border: none; background: transparent;">
+                <i class="bi bi-caret-up-fill text-primary fs-2"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="planModal" tabindex="-1" aria-labelledby="planModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-secondary text-light">
+            <div class="modal-header">
+                <h5 class="modal-title text-primary" id="planModalLabel">Plan Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Data:</strong> <span id="modal-data"></span></p>
+                <p><strong>Validity:</strong> <span id="modal-validity"></span></p>
+                <p><strong>Voice:</strong> <span id="modal-voice"></span></p>
+                <p><strong>Sms:</strong> <span id="modal-sms"></span></p>
+                <p><strong>Subscription:</strong> <span id="modal-subscription"></span></p>
+                <p><strong>Amount:</strong> <span id="modal-amount"></span></p>
+            </div>
+            <div class="modal-footer">
+                <a href="payment.html"><button type="button" class="btn btn-primary">Proceed</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <footer class="bg-primary text-light text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2025 Mobi-Comm. All Rights Reserved.</p>
+    </footer>
+    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script>
+     
+     const filterLinks = document.querySelectorAll('.list-group-item');
+    const filterOptions = document.querySelectorAll('.filter-option');
+
+    filterLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const filter = link.getAttribute('data-filter');
+
+            // Remove active class from all links
+            filterLinks.forEach(item => item.classList.remove('active'));
+            // Add active class to the clicked link
+            link.classList.add('active');
+
+            // Hide all filter options
+            filterOptions.forEach(option => {
+                option.style.display = 'none';
+            });
+
+            // Show the selected filter option
+            const selectedOption = document.getElementById(`${filter}-options`);
+            if (selectedOption) {
+                selectedOption.style.display = 'block';
+            }
+        });
+    });
+     function togglePlans(planId, viewMoreBtnId, hideBtnId) {
+    const plans = document.getElementById(planId);
+    const viewMoreBtn = document.getElementById(viewMoreBtnId);
+    const hideBtn = document.getElementById(hideBtnId);
+
+    if (plans.style.display === "none") {
+        plans.style.display = "flex"; // Show additional plans
+        viewMoreBtn.style.display = "none"; // Hide down arrow
+        hideBtn.style.display = "flex"; // Show up arrow
+    } else {
+        plans.style.display = "none"; // Hide additional plans
+        viewMoreBtn.style.display = "flex"; // Show down arrow
+        hideBtn.style.display = "none"; // Hide up arrow
+    }
+}
+        function showPlan(data, validity, voice, sms, subscription, amount) 
+            {
+        document.getElementById("modal-data").textContent = data;
+        document.getElementById("modal-validity").textContent = validity;
+        document.getElementById("modal-voice").textContent = voice;
+        document.getElementById("modal-sms").textContent = sms;
+        document.getElementById("modal-subscription").textContent = subscription;
+        document.getElementById("modal-amount").textContent = amount;
+        
+        // Show Modal
+        var modal = new bootstrap.Modal(document.getElementById('planModal'));
+        modal.show();
+    }
+
+    document.querySelector('.modal-footer .btn-primary').addEventListener('click', function() {
+    // Get selected data filters
+    const selectedDataFilters = Array.from(document.querySelectorAll('#data-options .form-check-input:checked')).map(input => input.nextElementSibling.textContent.trim());
+    const selectedValidityFilters = Array.from(document.querySelectorAll('#validity-options .form-check-input:checked')).map(input => input.nextElementSibling.textContent.trim());
+    const selectedPriceFilters = Array.from(document.querySelectorAll('#price-options .form-check-input:checked')).map(input => input.nextElementSibling.textContent.trim());
+    const selectedOttFilters = Array.from(document.querySelectorAll('#ott-options .form-check-input:checked')).map(input => input.nextElementSibling.textContent.trim());
+   
+    filterPlans(selectedDataFilters, selectedValidityFilters, selectedPriceFilters, selectedOttFilters);
+
+    const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
+    filterModal.hide(); 
+});
+document.querySelector('.modal-footer .btn-primary').addEventListener('click', function() {
+    // Get selected filters
+    const selectedDataFilters = Array.from(document.querySelectorAll('#data-options .form-check-input:checked')).map(input => input.value);
+    const selectedValidityFilters = Array.from(document.querySelectorAll('#validity-options .form-check-input:checked')).map(input => input.value);
+    const selectedPriceFilters = Array.from(document.querySelectorAll('#price-options .form-check-input:checked')).map(input => input.value);
+    const selectedOttFilters = Array.from(document.querySelectorAll('#ott-options .form-check-input:checked')).map(input => input.value);
+    
+    // Filter plans based on selected options
+    filterPlans(selectedDataFilters, selectedValidityFilters, selectedPriceFilters, selectedOttFilters);
+    
+    // Hide filter modal
+    const filterModal = new bootstrap.Modal(document.getElementById('filterModal'));
+    filterModal.hide();
+});
+
+function filterPlans(dataFilters, validityFilters, priceFilters, ottFilters) {
+    const planCards = document.querySelectorAll('.plan-card');
+    
+    planCards.forEach(card => {
+        const data = card.getAttribute('data-data');
+        const validity = card.getAttribute('data-validity');
+        const price = card.getAttribute('data-price');
+        const ott = card.getAttribute('data-ott');
+        
+        // Check if card matches selected filters
+        const matchesData = dataFilters.length === 0 || dataFilters.includes(data);
+        const matchesValidity = validityFilters.length === 0 || validityFilters.includes(validity);
+        const matchesPrice = priceFilters.length === 0 || priceFilters.includes(price);
+        const matchesOtt = ottFilters.length === 0 || ottFilters.includes(ott);
+        
+        if (matchesData && matchesValidity && matchesPrice && matchesOtt) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+    </script>
+</body>
+</html>
